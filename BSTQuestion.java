@@ -20,8 +20,6 @@ public class BSTQuestion extends AnswerHelper {
         // Create Tree traversals
         tree.createTraversals();
 
-        
-
         String question = "Suppose you have a Binary Search Tree with In-Order Traversal " + tree.traversal.getInOrder()
                 + " and Post-Order Traversal " + tree.traversal.getPostOrder()
                 + ". What is the Pre-Order Traversal of the Tree?";
@@ -45,9 +43,7 @@ public class BSTQuestion extends AnswerHelper {
         tree.createBST(arr); // Create BST from array of values
 
         // Create Tree traversals
-        tree.traversal.preOrder(tree.getRoot());
-        tree.traversal.postOrder(tree.getRoot());
-        tree.traversal.inOrder(tree.getRoot());
+        tree.createTraversals();
 
         String orgInOrder = tree.traversal.getInOrder();
         String orgPostOrder = tree.traversal.getPostOrder();
@@ -57,9 +53,7 @@ public class BSTQuestion extends AnswerHelper {
         tree.insert(insertValue);
 
         // Re-Create Tree traversals with new insert Value
-        tree.traversal.preOrder(tree.getRoot());
-        tree.traversal.postOrder(tree.getRoot());
-        tree.traversal.inOrder(tree.getRoot());
+        tree.createTraversals();
 
         String newInOrder = tree.traversal.getInOrder();
 
@@ -85,9 +79,7 @@ public class BSTQuestion extends AnswerHelper {
         tree.createBST(arr); // Create BST from array of values
 
         // Create Tree traversals
-        tree.traversal.preOrder(tree.getRoot());
-        tree.traversal.postOrder(tree.getRoot());
-        tree.traversal.inOrder(tree.getRoot());
+        tree.createTraversals();
 
         String orgInOrder = tree.traversal.getInOrder();
         String orgPostOrder = tree.traversal.getPostOrder();
@@ -96,9 +88,7 @@ public class BSTQuestion extends AnswerHelper {
 
         tree.deleteKey(deleteValue);
         // Re-Create Tree traversals with new insert Value
-        tree.traversal.preOrder(tree.getRoot());
-        tree.traversal.postOrder(tree.getRoot());
-        tree.traversal.inOrder(tree.getRoot());
+        tree.createTraversals();
 
         String newInOrder = tree.traversal.getInOrder();
         System.out.println(newInOrder);
