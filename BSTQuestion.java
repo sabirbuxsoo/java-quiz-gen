@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 /**
- * This class contains the questions for Binary Search Tree (BST) Author: Sabir
- * Buxsoo
+ * This class contains the questions for Binary Search Tree (BST) 
+ * Author: Sabir Buxsoo
  */
 public class BSTQuestion extends AnswerHelper {
     // Question 1 - This questions tests whether a student can construct a BST given
