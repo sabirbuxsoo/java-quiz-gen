@@ -18,7 +18,7 @@ public class BSTQuestion extends AnswerHelper {
         // Create Tree traversals
         tree.createTraversals();
 
-        //Create Question
+        // Create Question
         String question = "Suppose you have a Binary Search Tree with In-Order Traversal " + tree.traversal.getInOrder()
                 + " and Post-Order Traversal " + tree.traversal.getPostOrder()
                 + ". What is the Pre-Order Traversal of the Tree?";
@@ -44,23 +44,23 @@ public class BSTQuestion extends AnswerHelper {
         // Create Tree traversals
         tree.createTraversals();
 
-        //Inorder and PostOrder of original BST
+        // Inorder and PostOrder of original BST
         String orgInOrder = tree.traversal.getInOrder();
         String orgPostOrder = tree.traversal.getPostOrder();
 
-        //Reset values of traversal from original BST
+        // Reset values of traversal from original BST
         tree.traversal.clearTraversals();
 
-        //Insert Value into tree
+        // Insert Value into tree
         tree.insert(insertValue);
 
         // Re-Create Tree traversals with new insert Value
         tree.createTraversals();
 
-        //Get new InOrder after Insert
+        // Get new InOrder after Insert
         String newInOrder = tree.traversal.getInOrder();
 
-        //Create Question
+        // Create Question
         String question = "Suppose you have a Binary Search Tree with In-Order Traversal " + orgInOrder
                 + " and Post-Order Traversal " + orgPostOrder + ". Now suppose you insert " + insertValue
                 + " in the tree. What is the in-order Traversal of the resulting tree after the insert?";
@@ -77,7 +77,7 @@ public class BSTQuestion extends AnswerHelper {
         BST tree = new BST(); // New Binary Search Tree Object
         ArrayGenerator arrayGen = new ArrayGenerator(); // Create Random Array
 
-        int deleteValue = arrayGen.getDeleteValue(); //Value to be deleted from the BST
+        int deleteValue = arrayGen.getDeleteValue(); // Value to be deleted from the BST
         int[] arr = arrayGen.getArray(); // Get Random array
 
         tree.createBST(arr); // Create BST from array of values
@@ -85,22 +85,22 @@ public class BSTQuestion extends AnswerHelper {
         // Create Tree traversals
         tree.createTraversals();
 
-        //InOrder and PostOrder of Original BST
+        // InOrder and PostOrder of Original BST
         String orgInOrder = tree.traversal.getInOrder();
         String orgPostOrder = tree.traversal.getPostOrder();
 
-        //Reset values of traversal from original BST
+        // Reset values of traversal from original BST
         tree.traversal.clearTraversals();
 
-        tree.deleteKey(deleteValue); //Value to be deleted from BST
+        tree.deleteKey(deleteValue); // Value to be deleted from BST
 
         // Re-Create Tree traversals with new insert Value
         tree.createTraversals();
 
-        //Get new InOrder after Deleting element from BST
+        // Get new InOrder after Deleting element from BST
         String newInOrder = tree.traversal.getInOrder();
 
-        //Generate question
+        // Generate question
         String question = "Suppose you have a Binary Search Tree with In-Order Traversal " + orgInOrder
                 + " and Post-Order Traversal " + orgPostOrder + ". Now suppose you Delete " + deleteValue
                 + " from the tree. What is the in-order Traversal of the resulting tree after the deletion?";
@@ -110,7 +110,8 @@ public class BSTQuestion extends AnswerHelper {
         return questionThree;
     }
 
-    //Method to Generate questions from user selection. Method also takes number of questions to be generated
+    // Method to Generate questions from user selection. Method also takes number of
+    // questions to be generated
     static void generateQuestions(int numQuestions, int selection) {
         switch (selection) {
             case 1:
