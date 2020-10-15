@@ -12,7 +12,7 @@ public class Traversal {
 
     /* Given a binary tree, print its nodes according to the 
       "bottom-up" postorder traversal. */
-      static void postOrder(Node node) 
+      void postOrder(Node node) 
       { 
           if (node == null) 
               return; 
@@ -28,7 +28,7 @@ public class Traversal {
       } 
     
       /* Given a binary tree, print its nodes in inorder*/
-      static void inOrder(Node node) 
+      void inOrder(Node node) 
       { 
           if (node == null) 
               return; 
@@ -44,7 +44,7 @@ public class Traversal {
       } 
     
       /* Given a binary tree, print its nodes in preorder*/
-      static void preOrder(Node node) 
+      void preOrder(Node node) 
       { 
           if (node == null) 
               return; 
@@ -60,32 +60,32 @@ public class Traversal {
       } 
 
       //Get in-order traversal
-      public static String getInOrder(){
+      public String getInOrder(){
           return inOrderOutput;
       }
 
       //Get post-order traversal
-      public static String getPostOrder(){
+      public String getPostOrder(){
           return postOrderOutput;
       }
       
       //Get pre-order traversal
-      public static String getPreOrder(){
+      public String getPreOrder(){
           return preOrderOutput;
       }
 
       //Reset inOrderOutput
-      static void setInOrder(){
+      void setInOrder(){
           inOrderOutput = "";
       }
       
       // Reset postOrderOutput
-      static void setPostOrder(){
+      void setPostOrder(){
           postOrderOutput = "";
       }
 
       //Reset preOrderOutput
-      static void setPreOrder(){
+      void setPreOrder(){
           preOrderOutput = ""; 
       }
 
