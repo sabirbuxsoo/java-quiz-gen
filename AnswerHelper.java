@@ -4,11 +4,11 @@ import java.util.Collections;
 /**
  * This class provides methods to generate the answers to questions involving
  * trees. The class is used by the BSTQuestion, AVLQuestion and RBTQuestion
- * classes
+ * classes 
  * Author: Sabir Buxsoo
  */
 public class AnswerHelper {
-    //This method randomizes the original answer
+    // This method randomizes the original answer
     static String randomizeAnswer(String ans) {
         String[] arr = ans.split(" ");
         int arraySize = arr.length;
@@ -36,7 +36,7 @@ public class AnswerHelper {
 
     }
 
-    //This method generates the MCQ answers
+    // This method generates the MCQ answers
     static String generateAnswers(String ans) {
         String[] answers = new String[5];
         answers[0] = ans;
