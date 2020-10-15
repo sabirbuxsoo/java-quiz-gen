@@ -6,7 +6,9 @@ import java.util.Arrays;
  * and Deletion but does not re-balance the tree after an insertion or deletion
  * This has been done on purpose to ensure that students have a balanced BST to
  * begin with and test whether they understand the concept of deletion and
- * insertion Author: Sabir Buxsoo References:
+ * insertion 
+ * Author: Sabir Buxsoo 
+ * References:
  * https://www.geeksforgeeks.org/binary-search-tree-data-structure/
  * https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/
  * https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/
