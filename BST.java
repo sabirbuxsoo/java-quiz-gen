@@ -121,4 +121,11 @@ class BST {
     Node getRoot() {
         return root;
     }
+
+    // Create traversals of the tree
+    void createTraversals() {
+        traversal.preOrder(getRoot());
+        traversal.postOrder(getRoot());
+        traversal.inOrder(getRoot());
+    }
 }
