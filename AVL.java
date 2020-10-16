@@ -1,6 +1,6 @@
 /**
- * The AVL class is the main AVL Tree class
- * The class handles Insertion and Deletion
+ * The AVL class is the main AVL Tree class The class handles Insertion and
+ * Deletion 
  * Author: Sabir Buxsoo 
  * Code adaptation and References:
  * https://www.geeksforgeeks.org/avl-tree-set-1-insertion/
@@ -216,9 +216,9 @@ class AVL {
         return root;
     }
 
-     // This function takes an Array, sorts it and generated the Balanced BST
-     void createAVL(int arr[]) {
-        for(int i=0; i<arr.length; i++){
+    // This function takes an Array, sorts it and generated the Balanced BST
+    void createAVL(int arr[]) {
+        for (int i = 0; i < arr.length; i++) {
             root = insert(root, arr[i]);
         }
     }
