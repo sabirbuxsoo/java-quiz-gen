@@ -6,7 +6,8 @@ public class ListRandomizer {
 /* This class has the following objects:
  * An array list object to randomly generate an ArrayList of size < 30
  * An object to swap and shuffle an array list 
- * By: Mlungiseleli Notshokovu 
+ * 
+ * Class Made By: Mlungiseleli Notshokovu 
  * Reference:
  * https://www.journaldev.com/32661/shuffle-array-java
  */
