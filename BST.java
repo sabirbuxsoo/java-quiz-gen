@@ -15,7 +15,7 @@ import java.util.Arrays;
  * https://www.geeksforgeeks.org/sorted-array-to-balanced-bst/
  */
 class BST {
-    Traversal traversal; // WIll hold an instance of the Traversal Class
+    Traversal traversal; // Will hold an instance of the Traversal Class
     private static Node root;
 
     // Constructor initiates a new Traversal class
