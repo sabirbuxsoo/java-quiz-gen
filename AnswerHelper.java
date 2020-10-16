@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.Collections;
-
 /**
  * This class provides methods to generate the answers to questions involving
  * trees. The class is used by the BSTQuestion, AVLQuestion and RBTQuestion
@@ -8,32 +5,28 @@ import java.util.Collections;
  * Author: Sabir Buxsoo
  */
 public class AnswerHelper {
+    public static String rotateMiddle(String values) {
+        String[] arr = values.split(" ");
+        if (arr.length >= 4) {
+          String temp = arr[1];
+          for(int i=1; i<=(arr.length-3); i++) {
+            arr[i] = arr[i+1];
+          }
+          arr[arr.length-2] = temp;
+        }
+        return String.join(" ", arr);
+      }
+
     // This method randomizes the original answer
-    static String randomizeAnswer(String ans) {
-        String[] arr = ans.split(" ");
-        int arraySize = arr.length;
+    static String[] randomizeAnswer(String ans) {
+        
+        String[] results = new String[3];
+      
+        results[0] = rotateMiddle(ans);
+        results[1] = rotateMiddle(results[0]);
+        results[2] = rotateMiddle(results[1]);
 
-        String firstElement = arr[0];
-        String lastElement = arr[arraySize - 1];
-
-        String[] arr2 = new String[arraySize - 2];
-
-        String arr3[] = new String[arraySize];
-
-        arr3[0] = firstElement;
-        for (int i = 0; i < arraySize - 2; i++) {
-            arr2[i] = arr[i + 1];
-        }
-
-        Collections.shuffle(Arrays.asList(arr2));
-
-        for (int j = 0; j < arr2.length; j++) {
-            arr3[j + 1] = arr2[j];
-        }
-        arr3[arraySize - 1] = lastElement;
-
-        return String.join(" ", arr3);
-
+        return results;
     }
 
     // This method generates the MCQ answers
@@ -41,17 +34,9 @@ public class AnswerHelper {
         String[] answers = new String[5];
         answers[0] = ans;
         answers[4] = "None of the answers are correct";
-
+        String[] randomAns = randomizeAnswer(ans);
         for (int x = 0; x < 3; x++) {
-            while (true) {
-                String randomAns = randomizeAnswer(ans);
-                if (Arrays.stream(answers).anyMatch(randomAns::equals)) {
-                    continue;
-                } else {
-                    answers[x + 1] = randomAns;
-                    break;
-                }
-            }
+           answers[x+1] = randomAns[x];
         }
 
         String ansA = "* A. " + answers[0];
