@@ -9,8 +9,10 @@ class Driver {
         Scanner command = new Scanner(System.in);
         System.out.println("Please chose the Data Structure you would like to generate questions for from the list below:");
         System.out.println("1. Binary Search Tree");
-        System.out.println("2. Hash Tables");
-        System.out.println("3. Priority Queues");
+        System.out.println("2. AVL Tree");
+        System.out.println("3. Hashtable");
+        System.out.println("4. Priority Queue");
+        System.out.println("5. Create Test");
         System.out.println("0. Exit");
         
         System.out.println("Choice: ");
@@ -20,7 +22,7 @@ class Driver {
         choice = command.nextInt();
 
         if(choice == 1){
-            System.out.println("1. Binary Search Tree");
+            System.out.println("########### Binary Search Tree ###########");
         }else if(choice == 2){
             System.out.println("2. Hash Tables");
             Hashtable x = new Hashtable();
