@@ -137,7 +137,7 @@ public class BSTQuestion extends AnswerHelper {
 
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Select Type of question to generate:\n1. Generic\n2. Insertion\n3. Deletion:");
+        System.out.println("Select Type of question to generate:\n1. Generic\n2. Insertion\n3. Deletion");
 
         System.out.print("Enter your selection and press Enter: ");
         int selection = sc.nextInt();
