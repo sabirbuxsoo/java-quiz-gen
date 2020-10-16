@@ -6,10 +6,15 @@
  * Reference for Traversal Algorithms: https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
  */
 public class Traversal {
-    private static String preOrderOutput = ""; //Holds output of pre-order traversal
-    private static String postOrderOutput = ""; //Holds output of post order traversal
-    private static String inOrderOutput = ""; //Holds output of in order traversal
+    private static String preOrderOutput; //Holds output of pre-order traversal
+    private static String postOrderOutput; //Holds output of post order traversal
+    private static String inOrderOutput; //Holds output of in order traversal
 
+    Traversal(){
+        preOrderOutput = "";
+        postOrderOutput = "";
+        inOrderOutput = "";
+    }
     /* Given a binary tree, print its nodes according to the 
       "bottom-up" postorder traversal. */
       void postOrder(Node node) 
@@ -87,6 +92,12 @@ public class Traversal {
       //Reset preOrderOutput
       void setPreOrder(){
           preOrderOutput = ""; 
+      }
+
+      void clearTraversals(){
+        setInOrder();
+        setPostOrder();
+        setPreOrder();
       }
 
 }
