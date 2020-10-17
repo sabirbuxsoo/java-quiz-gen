@@ -66,7 +66,6 @@ class Driver {
                 System.out.println("0. Exit");
                 System.out.println("9. Go back to main menu");
                 System.out.println("Choice: ");
-
                 choice = command.nextInt();
                 if(choice == 0){
                     System.out.println("Goodbye!");
@@ -75,6 +74,7 @@ class Driver {
                     break;
                 }else{
                     System.out.println("Option unavailable. You will be redirected to the Main Menu");
+                    break;
                 }
             }   
         }  
