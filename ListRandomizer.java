@@ -15,7 +15,7 @@ public class ListRandomizer {
 	    int max = 30; 
 	    int min = 1; 
 	    int range = max - min + 1; 
-	    ArrayList<Integer> arr = new ArrayList();
+	    ArrayList<Integer> arr = new ArrayList<Integer>();
 	    // generate random numbers within 1 to 10 
 	    for (int i = 0; i < 10; i++) { 
 	        int rand = (int)(Math.random() * range) + min; 
@@ -26,7 +26,7 @@ public class ListRandomizer {
 	    return arr;
 	}
 
-    public static void shuffleList(ArrayList<Integer> a) {
+    public void shuffleList(ArrayList<Integer> a) {
         int n = a.size();
         Random random = new Random();
         random.nextInt();

@@ -51,7 +51,14 @@ class Driver {
                     AVLQuestion avlQuestion = new AVLQuestion(command);
                     avlQuestion.promptUser();
                 }else if(choice == 3){
-                    System.out.println("4. Priority Queues");
+                    System.out.println("############################################################################");
+                    System.out.println("###########                                                      ###########");
+                    System.out.println("###########                      Hashtable                       ###########");
+                    System.out.println("###########                                                      ###########");
+                    System.out.println("############################################################################");
+                    System.out.println();
+                    HashtableQuestion hsQuestion = new HashtableQuestion(command);
+                    hsQuestion.promptUser();
                 }else if(choice == 0){
                     System.out.println("Goodbye!");
                     System.exit(0);

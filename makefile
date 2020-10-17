@@ -15,7 +15,7 @@ J_DIRECTORY_CLASS = $(J_DIRECTORY_CLASS_FLAG) $(J_DIRECTORY_CLASS_PATH)
 # Flag for source path
 J_DIRECTORY_SOURCE_FLAG = -sourcepath
 # Specify the path where are the source files .java
-J_DIRECTORY_SOURCE_PATH = ./
+J_DIRECTORY_SOURCE_PATH = ./src/
 # Specify where are the source files .java
 J_DIRECTORY_SOURCE = $(J_DIRECTORY_SOURCE_FLAG) $(J_DIRECTORY_SOURCE_PATH)
 
@@ -39,6 +39,8 @@ default : bin $(OBJ)
 %.class: %.java
 		@$(JAVAC_COMPILE) $*.java
 
+questionfolder :
+	@mkdir -p ./bin/generatedQuestions/
 # Creation du dossier bin
 bin : 
 	@mkdir -p ./bin/
