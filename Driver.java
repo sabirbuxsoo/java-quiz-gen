@@ -15,9 +15,9 @@ class Driver {
         System.out.println("###########      Welcome to Data Structures Quiz Generator       ###########");
         System.out.println("###########                                                      ###########");
         System.out.println("############################################################################");
-        System.out.println();
         Scanner command = new Scanner(System.in);
         while(true){            
+            System.out.println();
             System.out.println("Please chose the Data Structure from the list below:");
             System.out.println();
             System.out.println("1. Binary Search Tree");
@@ -27,7 +27,7 @@ class Driver {
             System.out.println("5. Create Test");
             System.out.println("0. Exit");
             System.out.println();
-            System.out.println("Ener Choice: ");      
+            System.out.println("Enter Choice: ");      
             
             while (true){
                 choice = command.nextInt();
@@ -65,7 +65,8 @@ class Driver {
                 System.out.println();
                 System.out.println("0. Exit");
                 System.out.println("9. Go back to main menu");
-                System.out.println("Choice: ");
+                System.out.println();
+                System.out.println("Enter Choice: ");
                 choice = command.nextInt();
                 if(choice == 0){
                     System.out.println("Goodbye!");
