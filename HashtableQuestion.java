@@ -109,7 +109,7 @@ public class HashtableQuestion
         System.out.print("Enter number and press ENTER: ");
         hashtable.questionTypeChoice = sc.nextInt();
 
-        questionGenerator qg = new questionGenerator();
+        HashtableQuestion qg = new HashtableQuestion();
         String[] array = hashtable.listOfRandomItems(0,25);
         String[] temp = new String[hashtable.maxSize];
         for(int j=0; j<hashtable.maxSize; j++)
