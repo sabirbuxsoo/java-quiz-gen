@@ -10,23 +10,7 @@ public class Hashtable
     private String[] arrayForKeys;
     private String[] arrayForValues;
     private String originalHT;
-    /**
-     * Constructor the has no parameters
-     */
-    Hashtable()
-    {
-        this.maxSize = 7;
-        this.currentSize = 0;
-
-        this.arrayForKeys = new String[this.maxSize];
-        for(int i=0; i<this.maxSize; i++)
-            arrayForKeys[i] = i+"";
-
-        this.arrayForValues = new String[this.maxSize];
-        for(int i=0; i<this.maxSize; i++)
-            arrayForValues[i] = "-";
-    }
-
+   
     /**
      * Constructor that takes a parameter capacity for user to specify the hashtable size 
      * @param capacity
@@ -77,25 +61,6 @@ public class Hashtable
     int size()
     {
         return currentSize;
-    }
-
-    /**
-     * Method to shuffle array values for users to attain same values in different order
-     * @param array
-     */
-    public String[] shuffleArray(String[] array)
-    {
-        int index; 
-        String temp;
-        Random random = new Random();
-        for (int i = array.length - 1; i > 0; i--)
-        {
-            index = random.nextInt(i + 1);
-            temp = array[index];
-            array[index] = array[i];
-            array[i] = temp;
-        }
-        return array;
     }
 
     /**
