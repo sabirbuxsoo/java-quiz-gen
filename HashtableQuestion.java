@@ -74,12 +74,55 @@ public class HashtableQuestion extends AnswerHelper
                 + Arrays.toString(array) + " into an initially empty hashtable of length " + hashtable.getMaxSize()
                 + " using open addressing with hash function is h(x) = x % " + hashtable.getMaxSize() + " and linear probing ?";
         String ans = generateHashtableAnswers(hashtable.toString()); // Generate Answers
-        String questionTwo = point + "\n" + insertionQuestion + "\n" + ans;
+        String questionThree = point + "\n" + insertionQuestion + "\n" + ans;
         hashtable.clear();
 
-        return questionTwo;
+        return questionThree;
     }
 
+    static String four(String points) {
+        int htSize = 10;
+        Hashtable hashtable = new Hashtable(htSize);
+        ArrayGenerator arrayGen = new ArrayGenerator();
+
+        int delValue = arrayGen.getDeleteValue();
+
+        String originalHT = hashtable.createHT(arrayGen.getArray());
+        
+        String delHT = hashtable.remove(delValue);
+
+        String point = "Question (" + points + " point)";
+        String insertionQuestion = "What is the resulting hashtable after deleting "
+                + delValue + " from the hashtable " + originalHT
+                + " assuming LAZY  DELETION ?";
+        String ans = generateHashtableAnswers(delHT); // Generate Answers
+        String questionFour = point + "\n" + insertionQuestion + "\n" + ans;
+        hashtable.clear();
+
+        return questionFour;
+    }
+
+    static String five(String points) {
+        int htSize = 7;
+        Hashtable hashtable = new Hashtable(htSize);
+        ArrayGenerator arrayGen = new ArrayGenerator();
+
+        int delValue = arrayGen.getDeleteValue();
+
+        String originalHT = hashtable.createHT(arrayGen.getArray());
+        
+        String delHT = hashtable.remove(delValue);
+
+        String point = "Question (" + points + " point)";
+        String insertionQuestion = "What is the resulting hashtable after deleting "
+                + delValue + " from the hashtable " + originalHT
+                + " assuming LAZY  DELETION ?";
+        String ans = generateHashtableAnswers(delHT); // Generate Answers
+        String questionFour = point + "\n" + insertionQuestion + "\n" + ans;
+        hashtable.clear();
+
+        return questionFour;
+    }
 
     // Method to Generate questions from user selection. Method also takes number of
     // questions to be generated
@@ -116,4 +159,10 @@ public class HashtableQuestion extends AnswerHelper
        
         generateQuestions(numQuestions, selection, fileName, points);
     }
+
+    public static void main(String args[]){
+        System.out.println(five("3"));
+
+    }
+
 }

@@ -1,5 +1,7 @@
 #-----------------------------------------------------------------------
 # Define compiler and compiler flag variables for Java
+# 
+# Open source code adapted from
 # Author: https://github.com/GuillaumeRahbari
 #-----------------------------------------------------------------------
 
@@ -8,14 +10,14 @@ J_DEBUGGING_FLAG = -g
 # Flag for class path
 J_DIRECTORY_CLASS_FLAG = -d
 # Specify the path where to place .class files
-J_DIRECTORY_CLASS_PATH = ./bin/
+J_DIRECTORY_CLASS_PATH = ./
 # Specify where to place generated class files
 J_DIRECTORY_CLASS = $(J_DIRECTORY_CLASS_FLAG) $(J_DIRECTORY_CLASS_PATH)
 
 # Flag for source path
 J_DIRECTORY_SOURCE_FLAG = -sourcepath
 # Specify the path where are the source files .java
-J_DIRECTORY_SOURCE_PATH = ./src/
+J_DIRECTORY_SOURCE_PATH = ./
 # Specify where are the source files .java
 J_DIRECTORY_SOURCE = $(J_DIRECTORY_SOURCE_FLAG) $(J_DIRECTORY_SOURCE_PATH)
 

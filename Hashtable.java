@@ -11,7 +11,7 @@ public class Hashtable
     private int currentSize;
     private String[] arrayForKeys;
     private String[] arrayForValues;
-
+    private String originalHT;
     /**
      * Constructor the has no parameters
      */
@@ -197,13 +197,13 @@ public class Hashtable
      */
     public String toString()
     {
-        String hashtable = "";
+        originalHT = "";
         
         for(int i=0; i<this.maxSize; i++)
         {
-            hashtable = hashtable+String.format("%s ",arrayForValues[i]);
+            originalHT = originalHT+String.format("%s ",arrayForValues[i]);
         }
-        return hashtable;
+        return originalHT;
     }
 
     int getMaxSize(){
@@ -212,5 +212,43 @@ public class Hashtable
 
     int getCurrentSize(){
         return currentSize;
+    }
+
+    String createHT(int[] arr){
+        String[] array = Arrays.stream(arr).mapToObj(String::valueOf).toArray(String[]::new);
+
+        for (int i = 0; i < array.length; i++) {
+            put(array[i]);
+        }
+
+        originalHT = "";
+        
+        for(int i=0; i<this.maxSize; i++)
+        {
+            originalHT = originalHT+String.format("%s ",arrayForValues[i]);
+        }
+        return originalHT;
+    }
+
+    String remove(int deleteValue){
+        String delVal = Integer.toString(deleteValue);
+        
+        String[] newHT = new String[arrayForValues.length];
+
+        for(int i = 0; i<arrayForValues.length; i++){
+            if(arrayForValues[i].equals(delVal)){
+                newHT[i] = "-";
+            }else{
+                newHT[i] = arrayForValues[i];
+            }
+        }
+       
+        String delHT = "";
+        
+        for(int i=0; i<this.maxSize; i++)
+        {
+            delHT = delHT + String.format("%s ",newHT[i]);
+        }
+        return delHT;
     }
 }
