@@ -7,10 +7,11 @@ public class ListRandomizer {
  * An array list object to randomly generate an ArrayList of size < 30
  * An object to swap and shuffle an array list 
  * 
- * Class Made By: Mlungiseleli Notshokovu 
- * Reference:
+ * This code was referenced from the following website:
  * https://www.journaldev.com/32661/shuffle-array-java
  */
+	
+	
 	public ArrayList<Integer> getArr() {
 	    int max = 30; 
 	    int min = 1; 
@@ -26,7 +27,7 @@ public class ListRandomizer {
 	    return arr;
 	}
 
-    public void shuffleList(ArrayList<Integer> a) {
+    public static void shuffleList(ArrayList<Integer> a) {
         int n = a.size();
         Random random = new Random();
         random.nextInt();
@@ -40,5 +41,16 @@ public class ListRandomizer {
         int helper = a.get(i);
         a.set(i, a.get(change));
         a.set(change, helper);
+    }
+    
+    public int getRandomVal(int n){
+    	ArrayList<Integer> randomArr = new ArrayList<Integer>();
+    	Random rand = new Random();
+    	int num = rand.nextInt(n-1);
+    	for(int i=0; i<n; i++) {
+    		randomArr.add(num);
+    	}
+    	shuffleList(randomArr);
+    	return randomArr.get(0);
     }
 }
