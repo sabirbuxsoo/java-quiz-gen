@@ -59,6 +59,24 @@ class Driver {
                     System.out.println();
                     HashtableQuestion hsQuestion = new HashtableQuestion(command);
                     hsQuestion.promptUser();
+                }else if(choice == 4){
+                    System.out.println("############################################################################");
+                    System.out.println("###########                                                      ###########");
+                    System.out.println("###########                       PQueue                         ###########");
+                    System.out.println("###########                                                      ###########");
+                    System.out.println("############################################################################");
+                    System.out.println();
+                    PqQuestion pqQuestion = new PqQuestion(command);
+                    pqQuestion.promptUser();
+                }else if(choice == 5){
+                    System.out.println("############################################################################");
+                    System.out.println("###########                                                      ###########");
+                    System.out.println("###########                    Create Test                       ###########");
+                    System.out.println("###########                                                      ###########");
+                    System.out.println("############################################################################");
+                    System.out.println();
+                    CreateTest test = new CreateTest(command);
+                    test.promptUser();
                 }else if(choice == 0){
                     System.out.println("Goodbye!");
                     System.exit(0);
