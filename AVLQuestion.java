@@ -6,6 +6,9 @@ import java.util.Scanner;
  */
 public class AVLQuestion extends AnswerHelper {
     Scanner scan;
+    AVLQuestion(){
+        
+    }
     AVLQuestion(Scanner scan){
         this.scan = scan;
     }
