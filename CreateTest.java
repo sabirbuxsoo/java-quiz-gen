@@ -1,8 +1,6 @@
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -84,7 +82,6 @@ public class CreateTest {
             try {
                 writeAnswers(dirName, fileName, finalAnswers);
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
@@ -121,7 +118,37 @@ public class CreateTest {
             try {
                 writeAnswers(dirName, fileName, finalAnswers);
             } catch (IOException e) {
-                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+
+        //PQueue Questions
+        for(int x = 0; x<3; x++){
+            String finalAnswers = "";
+            String fileName = "PQueue-Q" + Integer.toString(x+1);
+            switch (x+1) {
+                case 1:
+                    for (int i = 0; i < numQuestions; i++) {
+                        finalAnswers += PqQuestion.createHeap(points);
+                    }
+                    break;
+                case 2:
+                    for (int i = 0; i < numQuestions; i++) {
+                        finalAnswers += PqQuestion.createInsert(points);
+                    }
+                    break;
+                case 3:
+                    for (int i = 0; i < numQuestions; i++) {
+                        finalAnswers += PqQuestion.createDelete(points);
+                    }
+                    break;
+                default:
+                    System.out.println("Wrong selection. Please try again");
+                    break;
+            }
+            try {
+                writeAnswers(dirName, fileName, finalAnswers);
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
@@ -143,7 +170,6 @@ public class CreateTest {
             try {
                 writeAnswers(dirName, fileName, finalAnswers);
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }   
