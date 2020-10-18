@@ -6,6 +6,9 @@ import java.util.Scanner;
  */
 public class BSTQuestion extends AnswerHelper {
     Scanner scan;
+    BSTQuestion(){
+        
+    }
 
     BSTQuestion(Scanner scan){
         this.scan = scan;
