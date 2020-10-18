@@ -24,7 +24,7 @@ class BST {
     }
 
     // This functions takes a sorted array and creates a balanced BST
-    Node generateBST(int arr[], int start, int end) {
+    private Node generateBST(int arr[], int start, int end) {
 
         // Base case
         if (start > end) {
@@ -51,7 +51,7 @@ class BST {
     }
 
     // Deletes the element from the BST. This deletion does not rebalance the tree
-    Node deleteRec(Node root, int key) {
+    private Node deleteRec(Node root, int key) {
         // Base case (Empty Tree)
         if (root == null) {
             return root;
@@ -79,7 +79,7 @@ class BST {
         return root;
     }
 
-    int minValue(Node root) {
+    private int minValue(Node root) {
         int minv = root.data;
         while (root.left != null) {
             minv = root.left.data;
@@ -95,7 +95,7 @@ class BST {
     }
 
     /// Recursively insert in BST
-    Node insertRec(Node root, int key) {
+    private Node insertRec(Node root, int key) {
 
         // If tree is empty, a new node is returned
         if (root == null) {

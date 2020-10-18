@@ -1,6 +1,4 @@
-import java.security.SecureRandom;
 import java.util.*;
-import java.io.*;
 
 public class Hashtable
 {
@@ -15,7 +13,7 @@ public class Hashtable
     /**
      * Constructor the has no parameters
      */
-    public Hashtable()
+    Hashtable()
     {
         this.maxSize = 7;
         this.currentSize = 0;
@@ -33,7 +31,7 @@ public class Hashtable
      * Constructor that takes a parameter capacity for user to specify the hashtable size 
      * @param capacity
      */
-    public Hashtable(int capacity)
+    Hashtable(int capacity)
     {
         this.maxSize = capacity;
         this.currentSize = 0;
@@ -53,7 +51,7 @@ public class Hashtable
      * @param value
      * @return
      */
-    public int hash(int value)
+    private int hash(int value)
     {
         return value%this.maxSize;
     }
@@ -61,7 +59,7 @@ public class Hashtable
     /**
      * clear method that empty's the hashtable when called
      */
-    public void clear()
+    void clear()
     {
         currentSize = 0;
         this.arrayForKeys = new String[this.maxSize];
@@ -76,69 +74,9 @@ public class Hashtable
      * Returns the current size of the hashtable
      * @return
      */
-    public int size()
+    int size()
     {
         return currentSize;
-    }
-
-    /**
-     * Returns a list of Random string items
-     * @param start
-     * @param end
-     * @return
-     */
-    public String[] listOfRandomItems(int start, int end)
-    {
-        int n = end-start+1;
-
-        int[] a = new int[n];
-
-        for(int i=0; i<n; i++)
-        {
-            a[i] = i;
-        }
-
-        String[] result = new String[n];
-        int x = n;
-        SecureRandom srd = new SecureRandom();
-        for(int i=0; i<n; i++)
-        {
-            int k = srd.nextInt(x);
-            result[i] = a[k]+"";
-            a[k] = a[x-1];
-            x--;
-        } 
-        return result;
-    }
-
-    /**
-     * Return a list of random numbers
-     * @param start
-     * @param end
-     * @return
-     */
-    public int[] listOfRandomNumbers(int start, int end)
-    {
-        int n = end-start+1;
-
-        int[] a = new int[n];
-
-        for(int i=0; i<n; i++)
-        {
-            a[i] = i;
-        }
-
-        int[] result = new int[n];
-        int x = n;
-        SecureRandom srd = new SecureRandom();
-        for(int i=0; i<n; i++)
-        {
-            int k = srd.nextInt(x);
-            result[i] = a[k];
-            a[k] = a[x-1];
-            x--;
-        } 
-        return result;
     }
 
     /**
@@ -179,16 +117,6 @@ public class Hashtable
             }
             i = (i+1)%this.maxSize;
         }while(i != temp);
-    }
-
-    /**
-     * Removes the specified element from the hashtable
-     * @param array
-     * @param valueToRemove
-     * @throws IOException
-     */
-    public void remove(String[] array,String valueToRemove) throws IOException
-    {
     }
 
     /**

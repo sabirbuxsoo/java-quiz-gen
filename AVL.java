@@ -15,14 +15,14 @@ class AVL {
     }
 
     // Get height of tree
-    int height(Node N) {
+    private int height(Node N) {
         if (N == null)
             return 0;
         return N.height;
     }
 
     // Find maximum value between two integers
-    int max(int a, int b) {
+    private int max(int a, int b) {
         if (a > b) {
             return a;
         }
@@ -30,7 +30,7 @@ class AVL {
     }
 
     // Right rotate subtree rooted with y
-    Node rightRotate(Node y) {
+    private Node rightRotate(Node y) {
         Node x = y.left;
         Node T2 = x.right;
 
@@ -47,7 +47,7 @@ class AVL {
     }
 
     // Left rotate subtree rooted with x
-    Node leftRotate(Node x) {
+    private Node leftRotate(Node x) {
         Node y = x.right;
         Node T2 = y.left;
 
@@ -64,7 +64,7 @@ class AVL {
     }
 
     // Get Balance factor of node N
-    int getBalance(Node N) {
+    private int getBalance(Node N) {
         if (N == null)
             return 0;
         return height(N.left) - height(N.right);
@@ -123,7 +123,7 @@ class AVL {
      * Given a non-empty binary search tree, return the node with minimum data value
      * found in that tree. Note that the entire tree does not need to be searched.
      */
-    Node minValueNode(Node node) {
+    private Node minValueNode(Node node) {
         Node current = node;
 
         /* loop down to find the leftmost leaf */

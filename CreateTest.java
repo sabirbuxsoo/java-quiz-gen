@@ -15,8 +15,8 @@ import java.util.Scanner;
  */
 public class CreateTest {
     Scanner scan;
-    int numQuestions;
-    String dirName, points;
+    private int numQuestions;
+    private String dirName, points;
     CreateTest(Scanner scan) {
         this.scan = scan;
     }
@@ -154,7 +154,7 @@ public class CreateTest {
         }
 
         //Hashtable Questions
-        for(int x = 0; x<1; x++){
+        for(int x = 0; x<4; x++){
             String finalAnswers = "";
             String fileName = "Hashtable-Q" + Integer.toString(x+1);
             switch (x+1) {
@@ -163,6 +163,22 @@ public class CreateTest {
                         finalAnswers += HashtableQuestion.one(points);
                     }
                     break;
+                case 2:
+                    for (int i = 0; i < numQuestions; i++) {
+                        finalAnswers += HashtableQuestion.two(points);
+                    }
+                    break;
+                case 3:
+                    for (int i = 0; i < numQuestions; i++) {
+                        finalAnswers += HashtableQuestion.three(points);
+                    }
+                    break;
+                case 4:
+                    for (int i = 0; i < numQuestions; i++) {
+                        finalAnswers += HashtableQuestion.four(points);
+                    }
+                    break;
+                
                 default:
                     System.out.println("Wrong selection. Please try again");
                     break;
