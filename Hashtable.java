@@ -7,12 +7,10 @@ public class Hashtable
     /**
      * Instance Variables
     */
-    public int maxSize;
-    public int currentSize;
-    public int questionTypeChoice=0;
-    public int variations=0;
-    public String[] arrayForKeys;
-    public String[] arrayForValues;
+    private int maxSize;
+    private int currentSize;
+    private String[] arrayForKeys;
+    private String[] arrayForValues;
 
     /**
      * Constructor the has no parameters
@@ -206,5 +204,13 @@ public class Hashtable
             hashtable = hashtable+String.format("%s ",arrayForValues[i]);
         }
         return hashtable;
+    }
+
+    int getMaxSize(){
+        return maxSize;
+    }
+
+    int getCurrentSize(){
+        return currentSize;
     }
 }
