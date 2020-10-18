@@ -34,7 +34,7 @@ class PqQuestion extends AnswerHelper{
         qq.pQueue.clear();
 
         // Create Question
-        String question = "What is the resulting Priority Queue from this list " + qq.qList + "?";
+        String question = "Min-heap: What is the resulting Priority Queue from this list " + qq.qList + "?";
         String point = "Question (" + points + " point)";
         String ans = generateAnswers(answer); // Generate Answers
         String questionOne = point + "\n" + question + "\n" + ans;
@@ -56,7 +56,7 @@ class PqQuestion extends AnswerHelper{
         qq.pQueue.clear();// Clear Priority Queue after retrieving question and answer
 
         // Create Question
-        String question = "What is the resulting Priority Queue when the value " + random_num
+        String question = "Min-heap: What is the resulting Priority Queue when the value " + random_num
                 + " is inserted to the list " + queue + "?";
         String point = "Question (" + points + " point)";
         String ans = generateAnswers(answer); // Generate Answers
@@ -78,7 +78,7 @@ class PqQuestion extends AnswerHelper{
         qq.pQueue.clear();
 
         // Create Question
-        String question = "What is the resulting Priority Queue from deleting value " + random_val + " from the list "
+        String question = "Min-heap: What is the resulting Priority Queue from deleting value " + random_val + " from the list "
                 + queue + "?";
         String point = "Question (" + points + " point)";
         String ans = generateAnswers(answer); // Generate Answers
