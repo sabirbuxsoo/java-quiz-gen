@@ -1,5 +1,13 @@
 import java.util.*;
 
+/**
+ * @author Sicelokuhle Shabalala
+ * @version 1.0
+ */
+
+ /**
+  * Class to generate hashtable questions for us
+  */
 public class HashtableQuestion extends AnswerHelper
 {
     Scanner scan;
@@ -11,6 +19,11 @@ public class HashtableQuestion extends AnswerHelper
         this.scan = scan;
     }
 
+    /**
+     * Returns a string of the question to generate Insertion Question Hashtable size is 7
+     * @param points
+     * @return
+     */
     static String one(String points) {
         int htSize = 7;
         Hashtable hashtable = new Hashtable(htSize);
@@ -34,6 +47,11 @@ public class HashtableQuestion extends AnswerHelper
         return questionOne;
     }
 
+    /**
+     * Returns a string of the question to generate Insertion Question Hashtable size is 10
+     * @param points
+     * @return
+     */
     static String two(String points) {
         int htSize = 10;
         Hashtable hashtable = new Hashtable(htSize);
@@ -57,6 +75,11 @@ public class HashtableQuestion extends AnswerHelper
         return questionTwo;
     }
 
+    /**
+     * Returns a string of the question to generate Deletion Question Hashtable size is 10
+     * @param points
+     * @return
+     */
     static String three(String points) {
         int htSize = 10;
         Hashtable hashtable = new Hashtable(htSize);
@@ -79,6 +102,11 @@ public class HashtableQuestion extends AnswerHelper
         return questionThree;
     }
 
+    /**
+     * Returns a string of the question to generate Deletion Question Hashtable size is 7
+     * @param points
+     * @return
+     */
     static String four(String points) {
         int htSize = 7;
         Hashtable hashtable = new Hashtable(htSize);
@@ -101,8 +129,9 @@ public class HashtableQuestion extends AnswerHelper
         return questionFour;
     }
 
-    // Method to Generate questions from user selection. Method also takes number of
-    // questions to be generated
+    /**
+     * Method to Generate questions from user selection. Method also takes number of questions to be generated
+     */
     static void generateQuestions(int numQuestions, int selection, String fileName, String points) {
         String finalAnswers = "";
         switch (selection) {
@@ -132,6 +161,9 @@ public class HashtableQuestion extends AnswerHelper
         writeAnswers(fileName, finalAnswers);
     }
 
+    /**
+     * Prompts the user to make a selection
+     */
     void promptUser(){
         System.out.println("Select question to generate:\n1. Insert values into hash table with linear probing h(k) = x % 7\n2. Insert values into hash table with linear probing h(k) = x % 10\n3. Delete values from a hashtable size 10\n4. Delete values from a hashtable size 7\n");
         System.out.print("Enter question selection and press Enter: ");

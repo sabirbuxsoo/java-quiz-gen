@@ -8,6 +8,8 @@ import java.io.UnsupportedEncodingException;
  * classes Author: Sabir Buxsoo
  */
 public class AnswerHelper {
+
+    //Flip middle values of a string
     static String rotateMiddle(String values) {
         String[] arr = values.split(" ");
         if (arr.length >= 4) {

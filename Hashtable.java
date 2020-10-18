@@ -1,5 +1,12 @@
 import java.util.*;
+/**
+ * @author Sicelokuhle Shabalala
+ * @version 1.0
+ */
 
+/**
+ * This is a Hashtable class, a Hashtable is a class the maps values to keys
+ */
 public class Hashtable
 {
     /**
@@ -99,18 +106,34 @@ public class Hashtable
         return originalHT;
     }
 
-    int getMaxSize(){
+    /**
+     * Returns the maximum size of the hashtable
+     * @return
+     */
+    public int getMaxSize()
+    {
         return maxSize;
     }
 
-    int getCurrentSize(){
+    /**
+     * Returns the current size of the hashtable
+     * @return
+     */
+    public int getCurrentSize()
+    {
         return currentSize;
     }
 
-    String createHT(int[] arr){
+    /**
+     * Creates a hashtable and returns a string
+     * @return
+     */
+    public String createHT(int[] arr)
+    {
         String[] array = Arrays.stream(arr).mapToObj(String::valueOf).toArray(String[]::new);
 
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) 
+        {
             put(array[i]);
         }
 
@@ -123,15 +146,23 @@ public class Hashtable
         return originalHT;
     }
 
-    String remove(int deleteValue){
+    /**
+     * Removes a value from the hashtable and returns a String rep of the hashtable with the deleted value not available
+     * @return
+     */
+    public String remove(int deleteValue){
         String delVal = Integer.toString(deleteValue);
         
         String[] newHT = new String[arrayForValues.length];
 
-        for(int i = 0; i<arrayForValues.length; i++){
-            if(arrayForValues[i].equals(delVal)){
+        for(int i = 0; i<arrayForValues.length; i++)
+        {
+            if(arrayForValues[i].equals(delVal))
+            {
                 newHT[i] = "-";
-            }else{
+            }
+            else
+            {
                 newHT[i] = arrayForValues[i];
             }
         }

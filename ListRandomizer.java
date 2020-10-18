@@ -45,6 +45,7 @@ public class ListRandomizer {
         a.set(change, helper);
     }
     
+    //This method was added to get a random value from the existing Arraylist that is reshuffled.
     public int getRandomVal(int n){
     	ArrayList<Integer> randomArr = new ArrayList<Integer>();
     	Random rand = new Random();
@@ -53,6 +54,6 @@ public class ListRandomizer {
     		randomArr.add(num);
     	}
     	shuffleList(randomArr);
-    	return randomArr.get(0);
+    	return randomArr.get(0);//this gets the first element from the randomized Arraylist
     }
 }

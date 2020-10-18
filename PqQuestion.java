@@ -92,17 +92,20 @@ class PqQuestion extends AnswerHelper{
     static void generateQuestions(int numQuestions, int selection, String fileName, String points) {
         String finalAnswers = "";
         switch (selection) {
+      //Min Heap Priority Queue from a given Array List
             case 1:
 
                 for (int i = 0; i < numQuestions; i++) {
                     finalAnswers += createHeap(points);
                 }
                 break;
+              //Inserting a specified value and outupt a readjusted Priority Queue
             case 2:
                 for (int i = 0; i < numQuestions; i++) {
                     finalAnswers += createInsert(points);
                 }
                 break;
+              //Deleting a specified value currently found in the Queue and output a readjusted Priority Queue
             case 3:
                 for (int i = 0; i < numQuestions; i++) {
                     finalAnswers += createDelete(points);
@@ -114,7 +117,7 @@ class PqQuestion extends AnswerHelper{
         }
         writeAnswers(fileName, finalAnswers);
     }
-
+    
     void promptUser(){
         System.out.println("Select question to generate:\n1. Find resulting Priority queue from list\n2. Resulting priority queue after insert\n3. Resulting priority queue after delete");
         System.out.print("Enter question selection and press Enter: ");

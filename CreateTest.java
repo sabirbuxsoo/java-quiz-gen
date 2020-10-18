@@ -28,6 +28,7 @@ public class CreateTest {
             Path path = Paths.get("generatedQuestions/"+dirName+"/");
             Files.createDirectories(path);
 
+            //Write to directory
             PrintWriter writer = new PrintWriter("generatedQuestions/"+dirName+"/"+fileName+".txt");
             writer.println(outputAns);
             System.out.println();
@@ -42,6 +43,7 @@ public class CreateTest {
         }
       }
 
+      //Prompt use for options and generated files
       void promptUser(){
         System.out.print("Enter number of questions you want generated and press Enter: ");
         numQuestions = scan.nextInt();

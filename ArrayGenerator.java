@@ -1,8 +1,12 @@
 import java.util.ArrayList;
 import java.util.Collections;
-
+/**
+ * This class is used togenerate random array, insert and delete values
+ * Author: Sabir Buxsoo
+ * 
+ */
 public class ArrayGenerator {
-    private static int arrSize = 7;
+    private static int arrSize = 7; //Fixed array size 7
     private static int[] arr = new int[arrSize]; // Array of Length 5
     private static int insertValue;
     private static int deleteValue;
