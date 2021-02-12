@@ -2,6 +2,7 @@ import java.util.*;
 /**
  * @author Sicelokuhle Shabalala
  * @version 1.0
+ * Reference: https://www.journaldev.com/35238/hash-table-in-c-plus-plus
  */
 
 /**
